@@ -147,7 +147,7 @@ impl Default for Scope {
 /// // execute the final call using `doit()`.
 /// // Values shown here are possibly random and not representative !
 /// let result = hub.scripts().run(req, "scriptId")
-///              .doit();
+///              .doit().await;
 ///
 /// match result {
 ///     Err(e) => match e {
@@ -372,7 +372,7 @@ impl<'a, S> ScriptMethods<'a, S> {
 /// // execute the final call using `doit()`.
 /// // Values shown here are possibly random and not representative !
 /// let result = hub.scripts().run(req, "scriptId")
-///              .doit();
+///              .doit().await;
 /// # }
 /// ```
 pub struct ScriptRunCall<'a, S>

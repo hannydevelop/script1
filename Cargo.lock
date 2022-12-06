@@ -577,12 +577,16 @@ dependencies = [
 name = "script1"
 version = "0.1.0"
 dependencies = [
+ "http",
  "hyper",
+ "hyper-rustls",
  "mime",
  "serde",
  "serde_codegen",
  "serde_json",
  "syntex 0.58.1",
+ "tokio",
+ "tower-service",
  "url 1.7.2",
  "yup-oauth2",
 ]

@@ -1,8 +1,7 @@
-extern crate syntex;
-extern crate serde_codegen;
-
 use std::env;
 use std::path::Path;
+use syntex;
+use serde_codegen;
 
 pub fn main() {
     let out_dir = env::var_os("OUT_DIR").unwrap();

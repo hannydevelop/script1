@@ -391,7 +391,7 @@ impl<'a, S> CallBuilder for ScriptRunCall<'a, S> {}
 impl<'a, S> ScriptRunCall<'a, S>
 where
 S: tower_service::Service<Uri> + Clone + Send + Sync + 'static,
-S::Response: hyper::client::connect::Connection + AsyncRead + AsyncWrite + Send + Unpin + 'static,
+S::Response: Send + hyper::client::connect::Connection + AsyncRead + AsyncWrite + Unpin + 'static,
 S::Future: Send + Unpin + 'static,
 S::Error: Into<Box<dyn StdError + Send + Sync>>,
 {
